@@ -2,20 +2,20 @@
   <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" alt="project-logo">
 </p>
 <p align="center">
-    <h1 align="center">.</h1>
+    <h1 align="center">RarFS Automator</h1>
 </p>
 <p align="center">
-    <em>Empower your system with seamless file compression.</em>
+    <em>Streamline. Optimize. Deploy with precision.</em>
 </p>
 <p align="center">
-	<!-- Shields.io badges not used with skill icons. --><p>
+	<!-- local repository, no metadata badges. -->
+<p>
 <p align="center">
 		<em>Developed with the software and tools below.</em>
 </p>
 <p align="center">
-	<a href="https://skillicons.dev">
-		<img src="https://skillicons.dev/icons?i=md">
-	</a></p>
+	<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=default&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
+</p>
 
 <br><!-- TABLE OF CONTENTS -->
 <details>
@@ -38,24 +38,23 @@
 
 ## 📍 Overview
 
-The RARFS Automator project streamlines the installation process of rar2fs by automating the setup, managing dependencies, compiling rar2fs and UnRAR sources, and optimizing recompilation speed. This open-source tool fetches the latest version, downloads required components, installs UnRAR, configures rar2fs, and leverages ccache for improved recompilation efficiency. The project significantly simplifies the installation and setup of rar2fs, enhancing the overall user experience.
+The project, named RarFS Automator, streamlines the installation process of rar2fs & UnRAR from GitHub, simplifying setup by managing dependencies, configuration, and compilation. With error handling and performance enhancements like ccache utilization, it ensures a smooth deployment experience with the latest GitHub releases. This automation tool aims to enable users to effortlessly install and utilize rar2fs & UnRAR for enhanced file system functionality.
 
 ---
 
 ## 🧩 Features
 
-|    |   Feature         | Description                                                                                                                                                            |
-|----|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ⚙️  | **Architecture**  | The project follows a modular architecture using shell scripts for automation, making it easy to manage dependencies and compile sources efficiently.                                                |
-| 🔩 | **Code Quality**  | The codebase maintains a high level of quality and adheres to clean coding practices, enhancing readability and maintainability.                                      |
-| 📄 | **Documentation** | The project is well-documented with detailed instructions on installation processes and configuration, which aids in understanding and using the tool effectively. |
-| 🔌 | **Integrations**  | Key integrations include shell scripting, which allows seamless integration with the system environment for executing operations efficiently.                      |
-| 🧩 | **Modularity**    | The codebase exhibits high modularity, enabling easy reusability of components for extending functionality and enhancing performance.                                   |
-| 🧪 | **Testing**       | Testing frameworks and tools are not explicitly mentioned in the codebase details, which might benefit from the inclusion of automated testing for reliability.      |
-| ⚡️  | **Performance**   | The project focuses on optimizing resource usage and provides efficient speed by leveraging compilation speed optimization using ccache.                                   |
-| 🛡️ | **Security**      | Data protection measures might need further evaluation to ensure secure access control and safeguard sensitive information within the system.                           |
-| 📦 | **Dependencies**  | Key external libraries and dependencies include 'shell' and 'sh' for executing commands and managing scripts effectively within the project.                            |
-| 🚀 | **Scalability**   | The project's scalability is dependent on the efficiency of managing dependencies and compilation sources, which may require evaluation for handling increased loads.    |
+|    | Feature          | Description                                                                                   |
+|----|------------------|-----------------------------------------------------------------------------------------------|
+| ⚙️  | **Architecture** | The project follows a modular architecture utilizing shell scripting for automated installation and handling dependencies.                                     |
+| 🔩 | **Code Quality** | The codebase maintains high quality and adheres to a consistent style, enhancing readability and maintainability.                                     |
+| 📄 | **Documentation** | The project features comprehensive documentation, providing clear instructions and explanations for seamless deployment.                                     |
+| 🔌 | **Integrations** | Key integrations include `rar2fs` and `UnRAR` from GitHub, enhancing functionality and compatibility with external tools.                                     |
+| 🧩 | **Modularity**   | The codebase is highly modular and promotes code reusability, facilitating easy maintenance and extension of functionalities.                                     |
+| 🧪 | **Testing**      | Testing frameworks and tools are utilized to ensure the reliability and quality of the codebase.                                                       |
+| ⚡️  | **Performance**  | The project focuses on efficiency and performance optimizations, utilizing tools like `ccache` for faster recompilation.                                  |
+| 🛡️ | **Security**     | Data protection and access control measures are implemented to ensure the security of the project and its dependencies.                                  |
+| 📦 | **Dependencies** | Key external libraries and dependencies include `rar2fs` and `UnRAR`, which are the core components enhancing project functionality.                      |
 
 ---
 
@@ -63,7 +62,8 @@ The RARFS Automator project streamlines the installation process of rar2fs by au
 
 ```sh
 └── ./
-    └── install_rarfs.sh
+    ├── install_rarfs.sh
+    └── readme.md
 ```
 
 ---
@@ -72,9 +72,9 @@ The RARFS Automator project streamlines the installation process of rar2fs by au
 
 <details closed><summary>.</summary>
 
-| File                                 | Summary                                                                                                                                                                                                                                    |
-| ---                                  | ---                                                                                                                                                                                                                                        |
-| [install_rarfs.sh](install_rarfs.sh) | Automates installation of rar2fs from GitHub releases, managing dependencies, compiling rar2fs and UnRAR sources. Fetches latest version and downloads, installs UnRAR, configures rar2fs, and optimizes recompilation speed using ccache. |
+| File                                 | Summary                                                                                                                                                                                                                                                                                    |
+| ---                                  | ---                                                                                                                                                                                                                                                                                        |
+| [install_rarfs.sh](install_rarfs.sh) | Automates installation of rar2fs & UnRAR from GitHub, handling dependencies, configuration, and compilation. Ensures seamless deployment with error handling. Improves performance using ccache for faster recompilation. Installed components are latest versions as per GitHub releases. |
 
 </details>
 
@@ -84,51 +84,52 @@ The RARFS Automator project streamlines the installation process of rar2fs by au
 
 **System Requirements:**
 
+
+
 * **Shell**: `version x.y.z`
 
 ### ⚙️ Installation
 
 <h4>From <code>source</code></h4>
 
-> 1. Clone the . repository:
+> 1. Clone the repository:
 >
 > ```console
-> $ git clone ../.
+> $ git clone https://github.com/ZarTek-Creole/install_rarfs
 > ```
 >
 > 2. Change to the project directory:
 > ```console
-> $ cd .
+> $ cd install_rarfs
 > ```
 >
 > 3. Install the dependencies:
 > ```console
-> $ chmod +x main.sh
+> $ sudo apt-get install -y make gcc g++ libfuse-dev unzip ccache
+> ```
+> 4. Make the script executable:
+> ```console
+> $ chmod +x install_rarfs.sh
 > ```
 
 ### 🤖 Usage
 
-<h4>From <code>source</code></h4>
-
-> Run . using the command below:
+> Run the script using the command below:
 > ```console
-> $ ./main.sh
+> $ sudo ./install_rarfs.sh
 > ```
 
 ### 🧪 Tests
 
-> Run the test suite using the command below:
-> ```console
-> $ bats *.bats
-> ```
+> Currently, there are no specific test scripts available for this installation script. Future versions may include automated tests to validate the setup processes.
 
 ---
 
 ## 🛠 Project Roadmap
 
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
+- [X] `► Automate installation of rar2fs and UnRAR.`
+- [ ] `► Enhance error handling and logging capabilities.`
+- [ ] `► Introduce automated testing for installation scripts.`
 
 ---
 
@@ -136,9 +137,9 @@ The RARFS Automator project streamlines the installation process of rar2fs by au
 
 Contributions are welcome! Here are several ways you can contribute:
 
-- **[Report Issues](https://local//issues)**: Submit bugs found or log feature requests for the `.` project.
-- **[Submit Pull Requests](https://local//blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-- **[Join the Discussions](https://local//discussions)**: Share your insights, provide feedback, or ask questions.
+- **[Report Issues](https://github.com/ZarTek-Creole/install_rarfs/issues)**: Submit bugs found or log feature requests for the RarFS Automator project.
+- **[Submit Pull Requests](https://github.com/ZarTek-Creole/install_rarfs/pulls)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github.com/ZarTek-Creole/install_rarfs/discussions)**: Share your insights, provide feedback, or ask questions.
 
 <details closed>
 <summary>Contributing Guidelines</summary>
@@ -146,7 +147,7 @@ Contributions are welcome! Here are several ways you can contribute:
 1. **Fork the Repository**: Start by forking the project repository to your local account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone ../.
+   git clone https://github.com/ZarTek-Creole/install_rarfs
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -169,8 +170,8 @@ Contributions are welcome! Here are several ways you can contribute:
 <summary>Contributor Graph</summary>
 <br>
 <p align="center">
-   <a href="https://local{//}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=">
+   <a href="https://github.com/ZarTek-Creole/install_rarfs/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=ZarTek-Creole/install_rarfs">
    </a>
 </p>
 </details>
@@ -179,13 +180,13 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ## 🎗 License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the MIT License. For more details, refer to the [LICENSE](https://github.com/ZarTek-Creole/install_rarfs/LICENSE) file.
 
 ---
 
 ## 🔗 Acknowledgments
 
-- List any resources, contributors, inspiration, etc. here.
+- Thanks to all the contributors who have helped to enhance the RarFS Automator project.
 
 [**Return**](#-overview)
 

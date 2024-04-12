@@ -50,8 +50,6 @@ display_header() {
     echo "Description : Ce script installe automatiquement la derniere version de rar2fs depuis les releases GitHub et unrar $UNRAR_VERSION."
     echo "Author: ZarTek-Creole"
     echo "URL: https://github.com/ZarTek-Creole/install_rarfs"
-    echo "Press any key to continue..."
-    read -n1 -r -p " "
 }
 # Downloads and installs UnRAR
 install_unrar() {
