@@ -37,9 +37,10 @@ install_unrar() {
   wget -q "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" -P "$work_dir" || return 1
   tar -zxf "$work_dir/unrarsrc-${UNRAR_VERSION}.tar.gz" -C "$work_dir" || return 1
   pushd "$work_dir/unrar" > /dev/null || return 1
-  make -s && sudo make install > /dev/null 2>&1 || { echo "Installation of unrar failed" >&2; return 1; }
-  make -s lib && sudo make install-lib > /dev/null 2>&1 || { echo "Library installation of unrar failed" >&2; return 1; }
-
+  make -s -j"$NUM_CORES" || { echo "Compilation of unrar failed" >&2; return 1; }
+  sudo make install || { echo "Installation of unrar failed" >&2; return 1; }
+  make -s lib || { echo "Compilation of library failed" >&2; return 1; }
+  sudo make install-lib || { echo "Library installation of unrar failed" >&2; return 1; }
   popd > /dev/null
 }
 
@@ -53,8 +54,7 @@ install_rar2fs() {
   version_dir=$(basename "$download_url" .tar.gz)
   tar -zxf "$work_dir/$version_dir.tar.gz" -C "$work_dir" || return 1
   pushd "$work_dir/$version_dir" > /dev/null || return 1
-  ./configure --with-unrar-lib="/usr/lib/" > /dev/null 2>&1 && make -s && sudo make install > /dev/null 2>&1 || { echo "Installation failed" >&2; return 1; }
-
+  ./configure --with-unrar-lib="/usr/lib/" > /dev/null 2>&1 && make -s -j"$NUM_CORES" && sudo make install > /dev/null 2>&1 || { echo "Installation failed" >&2; return 1; }
   popd > /dev/null
 }
 
