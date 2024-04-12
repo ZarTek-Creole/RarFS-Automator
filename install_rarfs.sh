@@ -44,15 +44,14 @@ fetch_latest_version_and_url() {
   echo "$latest_version" "$download_url"
 }
 
-header() {
-  clear  # Nettoyer le terminal pour une meilleure lisibilité
-  echo -e "\033[1;34mInstallation de rar2fs\033[0m"  # En-tête en bleu gras
-  echo "-------------------------------------------"
-  echo "Auteur : ZarTek-Creole"
-  echo "URL du projet : https://github.com/ZarTek-Creole/install_rarfs"
-  echo "Description : Ce script installe automatiquement rar2fs depuis les releases GitHub."
-  echo "Appuyez sur une touche pour continuer..."
-  read -r -p " "  # Attend que l'utilisateur appuie sur une touche
+display_header() {
+    clear
+    echo -e "\033[1;34mInstalling rar2fs from GitHub\033[0m"
+    echo "Description : Ce script installe automatiquement la derniere version de rar2fs depuis les releases GitHub et unrar $UNRAR_VERSION."
+    echo "Author: ZarTek-Creole"
+    echo "URL: https://github.com/ZarTek-Creole/install_rarfs"
+    echo "Press any key to continue..."
+    read -n1 -r -p " "
 }
 # Downloads and installs UnRAR
 install_unrar() {
@@ -144,7 +143,7 @@ configure_ccache() {
 # Manages the installation process
 main() {
   local version download_url
-  header
+  display_header
   trap 'rm -rf "$WORK_DIR"' EXIT  # Clean up on script exit
 
   install_dependencies || {
