@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" alt="project-logo">
 </p>
@@ -6,12 +7,6 @@
 </p>
 <p align="center">
     <em>Streamline. Optimize. Deploy with precision.</em>
-</p>
-<p align="center">
-	<!-- local repository, no metadata badges. -->
-<p>
-<p align="center">
-		<em>Developed with the software and tools below.</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=default&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
@@ -38,7 +33,7 @@
 
 ## 📍 Overview
 
-The project, named RarFS Automator, streamlines the installation process of rar2fs & UnRAR from GitHub, simplifying setup by managing dependencies, configuration, and compilation. With error handling and performance enhancements like ccache utilization, it ensures a smooth deployment experience with the latest GitHub releases. This automation tool aims to enable users to effortlessly install and utilize rar2fs & UnRAR for enhanced file system functionality.
+The project, named **RarFS Automator**, streamlines the installation process of rar2fs & UnRAR from GitHub, simplifying setup by managing dependencies, configuration, and compilation. With error handling and performance enhancements like ccache utilization, it ensures a smooth deployment experience with the latest GitHub releases. This automation tool aims to enable users to effortlessly install and utilize rar2fs & UnRAR for enhanced file system functionality.
 
 ---
 
@@ -95,7 +90,9 @@ The project, named RarFS Automator, streamlines the installation process of rar2
 > 1. Clone the repository:
 >
 > ```console
-> $ git clone https://github.com/ZarTek-Creole/install_rarfs
+> $ git clone https://github.com/Zar
+
+Tek-Creole/install_rarfs
 > ```
 >
 > 2. Change to the project directory:
