@@ -1,0 +1,23 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install kcov
+      run: sudo apt-get install kcov
+    - name: Run tests with coverage
+      run: kcov --bash-dont-parse-binary-dir coverage bats .test_install_rarfs.bats
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: ./coverage
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
