@@ -2,18 +2,21 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" alt="project-logo">
 </p>
-<p align="center">
-    <h1 align="center">RarFS Automator</h1>
-</p>
+<h1 align="center">RarFS Automator</h1>
 <p align="center">
     <em>Streamline. Optimize. Deploy with precision.</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=default&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
+ <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=default&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
+ <img src="https://img.shields.io/github/workflow/status/ZarTek-Creole/install_rarfs/CI?label=GitHub%20Actions&logo=github" alt="GitHub%20Actions">
+ <img src="https://img.shields.io/codecov/c/github/ZarTek-Creole/install_rarfs?label=Codecov&logo=codecov" alt="Codecov">
+ <img src="https://img.shields.io/github/downloads/ZarTek-Creole/install_rarfs/total?label=Downloads&logo=github" alt="Downloads">
+ <img src="https://img.shields.io/github/license/ZarTek-Creole/install_rarfs?label=License&logo=github" alt="License">
 </p>
 
-<br><!-- TABLE OF CONTENTS -->
-<details>
+
+<!-- TABLE OF CONTENTS -->
+<details open>
   <summary>Table of Contents</summary><br>
 
 - [📍 Overview](#-overview)
@@ -28,12 +31,13 @@
 - [🤝 Contributing](#-contributing)
 - [🎗 License](#-license)
 - [🔗 Acknowledgments](#-acknowledgments)
+
 </details>
 <hr>
 
 ## 📍 Overview
 
-The project, named **RarFS Automator**, streamlines the installation process of rar2fs & UnRAR from GitHub, simplifying setup by managing dependencies, configuration, and compilation. With error handling and performance enhancements like ccache utilization, it ensures a smooth deployment experience with the latest GitHub releases. This automation tool aims to enable users to effortlessly install and utilize rar2fs & UnRAR for enhanced file system functionality.
+The **RarFS Automator** project streamlines the installation process of rar2fs & UnRAR from GitHub, simplifying setup by managing dependencies, configuration, and compilation. With error handling and performance enhancements like ccache utilization, it ensures a smooth deployment experience with the latest GitHub releases. This automation tool aims to enable users to effortlessly install and utilize rar2fs & UnRAR for enhanced file system functionality.
 
 ---
 
@@ -43,7 +47,7 @@ The project, named **RarFS Automator**, streamlines the installation process of 
 |----|------------------|-----------------------------------------------------------------------------------------------|
 | ⚙️  | **Architecture** | The project follows a modular architecture utilizing shell scripting for automated installation and handling dependencies.                                     |
 | 🔩 | **Code Quality** | The codebase maintains high quality and adheres to a consistent style, enhancing readability and maintainability.                                     |
-| 📄 | **Documentation** | The project features comprehensive documentation, providing clear instructions and explanations for seamless deployment.                                     |
+| 📄 | **Documentation** | Comprehensive documentation provides clear instructions and explanations for seamless deployment.                                     |
 | 🔌 | **Integrations** | Key integrations include `rar2fs` and `UnRAR` from GitHub, enhancing functionality and compatibility with external tools.                                     |
 | 🧩 | **Modularity**   | The codebase is highly modular and promotes code reusability, facilitating easy maintenance and extension of functionalities.                                     |
 | 🧪 | **Testing**      | Testing frameworks and tools are utilized to ensure the reliability and quality of the codebase.                                                       |
@@ -79,9 +83,7 @@ The project, named **RarFS Automator**, streamlines the installation process of 
 
 **System Requirements:**
 
-
-
-* **Shell**: `version x.y.z`
+- **Shell**: `version x.y.z`
 
 ### ⚙️ Installation
 
@@ -90,9 +92,9 @@ The project, named **RarFS Automator**, streamlines the installation process of 
 > 1. Clone the repository:
 >
 > ```console
-> $ git clone https://github.com/Zar
+> $ git clone
 
-Tek-Creole/install_rarfs
+ https://github.com/ZarTek-Creole/install_rarfs
 > ```
 >
 > 2. Change to the project directory:
@@ -101,10 +103,13 @@ Tek-Creole/install_rarfs
 > ```
 >
 > 3. Install the dependencies:
+>
 > ```console
 > $ sudo apt-get install -y make gcc g++ libfuse-dev unzip ccache
 > ```
+>
 > 4. Make the script executable:
+>
 > ```console
 > $ chmod +x install_rarfs.sh
 > ```
@@ -112,6 +117,7 @@ Tek-Creole/install_rarfs
 ### 🤖 Usage
 
 > Run the script using the command below:
+>
 > ```console
 > $ sudo ./install_rarfs.sh
 > ```
@@ -143,24 +149,33 @@ Contributions are welcome! Here are several ways you can contribute:
 
 1. **Fork the Repository**: Start by forking the project repository to your local account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+
    ```sh
    git clone https://github.com/ZarTek-Creole/install_rarfs
    ```
+
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+
    ```sh
    git checkout -b new-feature-x
    ```
+
 4. **Make Your Changes**: Develop and test your changes locally.
 5. **Commit Your Changes**: Commit with a clear message describing your updates.
+
    ```sh
    git commit -m 'Implemented new feature x.'
    ```
+
 6. **Push to local**: Push the changes to your forked repository.
+
    ```sh
    git push origin new-feature-x
    ```
+
 7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
 8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+
 </details>
 
 <details closed>
