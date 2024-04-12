@@ -8,8 +8,9 @@
 </p>
 <p align="center">
  <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=default&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
- <img src="https://img.shields.io/github/workflow/status/ZarTek-Creole/install_rarfs/CI?label=GitHub%20Actions&logo=github" alt="GitHub%20Actions">
-[![codecov](https://codecov.io/gh/ZarTek-Creole/RarFS-Automator/graph/badge.svg?token=80M1XEXP3L)](https://codecov.io/gh/ZarTek-Creole/RarFS-Automator)
+<a href="https://codecov.io/gh/ZarTek-Creole/RarFS-Automator" > 
+ <img src="https://codecov.io/gh/ZarTek-Creole/RarFS-Automator/graph/badge.svg?token=80M1XEXP3L"/> 
+ </a>
  <img src="https://img.shields.io/github/downloads/ZarTek-Creole/install_rarfs/total?label=Downloads&logo=github" alt="Downloads">
  <img src="https://img.shields.io/github/license/ZarTek-Creole/install_rarfs?label=License&logo=github" alt="License">
 </p>
