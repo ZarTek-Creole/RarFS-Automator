@@ -1,23 +1,30 @@
-name: CI
+name: Workflow for Codecov example-python
 on: [push, pull_request]
 jobs:
-  test:
+  run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    - name: Install kcov
-      run: sudo apt-get install kcov
-    - name: Run tests with coverage
-      run: kcov --bash-dont-parse-binary-dir coverage bats .test_install_rarfs.bats
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage
-        flags: unittests
-        name: codecov-umbrella
-        fail_ci_if_error: true
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run ATS
+        uses: codecov/codecov-ats@v0
+        env:
+          CODECOV_STATIC_TOKEN: ${{ secrets.CODECOV_STATIC_TOKEN }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run tests and collect coverage
+        run: pytest --cov app ${{ env.CODECOV_ATS_TESTS }}
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          flags: smart-tests
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
