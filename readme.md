@@ -90,38 +90,17 @@ The **RarFS Automator** project streamlines the installation process of rar2fs &
 
 <h4>From <code>source</code></h4>
 
-> 1. Clone the repository:
->
-> ```console
-> $ git clone
-
- https://github.com/ZarTek-Creole/install_rarfs
-> ```
->
-> 2. Change to the project directory:
-> ```console
-> $ cd install_rarfs
-> ```
->
-> 3. Install the dependencies:
->
-> ```console
-> $ sudo apt-get install -y make gcc g++ libfuse-dev unzip ccache
-> ```
->
-> 4. Make the script executable:
->
-> ```console
-> $ chmod +x install_rarfs.sh
-> ```
+1. Install the dependencies:
+```console
+$ sudo apt-get install -y make gcc g++ libfuse-dev unzip ccache jq
+```
 
 ### 🤖 Usage
 
-> Run the script using the command below:
->
-> ```console
-> $ sudo ./install_rarfs.sh
-> ```
+Run the script using the command below:
+```console
+ $ curl -S https://raw.githubusercontent.com/ZarTek-Creole/RarFS-Automator/refs/heads/master/install_rarfs.sh | bash --
+ ```
 
 ### 🧪 Tests
 
