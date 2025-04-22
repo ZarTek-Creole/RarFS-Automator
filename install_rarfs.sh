@@ -12,7 +12,7 @@
 #   Exécutez ce script sans arguments. Assurez-vous d'avoir les droits
 #   administratifs (sudo) nécessaires pour l'installation des paquets.
 #
-# Dépendances : make, gcc, g++, libfuse-dev, unzip, ccache
+# Dépendances : make, gcc, g++, libfuse-dev, unzip, ccache, jq
 #
 #######################################################################
 
@@ -20,7 +20,7 @@
 readonly REPO="hasse69/rar2fs"
 readonly UNRAR_VERSION="6.2.1"
 readonly API_URL="https://api.github.com/repos/$REPO/releases/latest"
-readonly DEPENDENCIES="make gcc g++ libfuse-dev unzip ccache"
+readonly DEPENDENCIES="make gcc g++ libfuse-dev unzip ccache jq"
 # shellcheck disable=SC2155
 readonly WORK_DIR=$(mktemp -d)
 readonly RARFS_CONFIGURATION_ARGS="--with-unrar-lib=/usr/local/lib --with-unrar=${WORK_DIR}/unrar"
@@ -35,7 +35,7 @@ fetch_latest_version_and_url() {
   local latest_version
   latest_version=$(echo "$response" | jq -r '.tag_name')
   local download_url
-  download_url=$(echo "$response" | jq -r '.assets[0].browser_download_url')
+  download_url=$(echo "$response" | jq -r '.assets[0].browser_download_url // .tarball_url')
 
   if [[ -z "$latest_version" || -z "$download_url" ]]; then
     echo -e "\033[0;31mError\033[0m: Fetching the latest version or download URL failed." >&2
